@@ -1,0 +1,27 @@
+{
+    "name": "tcloud.ax/password-entropy-bundle",
+    "description": "Symfony bundle for calculating password entropy",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexei Yudov",
+            "email": "tcloud.ax@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "symfony/dependency-injection": "^5.4",
+        "symfony/config": "^5.4",
+        "symfony/http-kernel": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "PasswordEntropyBundle\\": "src/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6"
+    }
+
+}
