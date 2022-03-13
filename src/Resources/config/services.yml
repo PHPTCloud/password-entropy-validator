@@ -1,0 +1,16 @@
+parameters:
+  password_entropy_manager.class: PasswordEntropyBundle\PasswordEntropyManager
+  nist_entropy_calculation_service.class: PasswordEntropyBundle\Service\NistEntropyCalculationService
+
+services:
+  nist_entropy_calculation_service:
+    class: nist_entropy_calculation_service.class
+
+  password_entropy_manager:
+    class: "%password_entropy_manager.class%"
+    arguments:
+      - "@nist_entropy_calculation_service"
+
+
+  # Interfaces defenition
+  PasswordEntropyBundle\PasswordEntropyManagerInterface: "@password_entropy_manager"
