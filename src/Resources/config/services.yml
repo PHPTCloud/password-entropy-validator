@@ -1,15 +1,20 @@
 parameters:
   password_entropy_manager.class: PasswordEntropyBundle\PasswordEntropyManager
-  nist_entropy_calculation_service.class: PasswordEntropyBundle\Service\NistEntropyCalculationService
+  nist_entropy_calculator.class: PasswordEntropyBundle\Service\NistEntropyCalculator
+  occurrence_entropy_calculator.class: PasswordEntropyBundle\Service\OccurrenceEntropyCalculator
 
 services:
-  nist_entropy_calculation_service:
-    class: nist_entropy_calculation_service.class
+  nist_entropy_calculator:
+    class: nist_entropy_calculator.class
+  
+  occurrence_entropy_calculator:
+    class: occurrence_entropy_calculator.class
 
   password_entropy_manager:
     class: "%password_entropy_manager.class%"
     arguments:
-      - "@nist_entropy_calculation_service"
+      - "@nist_entropy_calculator"
+      - "@occurrence_entropy_calculator"
 
 
   # Interfaces defenition
