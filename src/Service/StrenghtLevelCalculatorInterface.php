@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PasswordEntropyBundle\Service;
 
-interface StrenghtLevelServiceInterface
+interface StrenghtLevelCalculatorInterface
 {
     /**
      * @param string $password
@@ -12,4 +12,11 @@ interface StrenghtLevelServiceInterface
      * @return int
      */
     public function checkLevel(string $password): int;
+
+    /**
+     * @param string $password
+     * 
+     * @return float
+     */
+    public function calculate(string $password): float;
 }

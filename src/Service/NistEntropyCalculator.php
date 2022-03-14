@@ -14,7 +14,7 @@ use PasswordEntropyBundle\PasswordEntropyManager;
  * @author tcloud.ax <tcloud.ax@gmail.com>
  * @since  v1.0.0
  */
-class NistEntropyCalculationService implements StrenghtLevelServiceInterface
+class NistEntropyCalculator implements StrenghtLevelCalculatorInterface
 {
     private const FIRST_LEVEL_BIT = 4.0;
     private const SECOND_LEVEL_BIT = 2.0;
@@ -32,7 +32,7 @@ class NistEntropyCalculationService implements StrenghtLevelServiceInterface
      */
     public function checkLevel(string $password): int
     {
-        $bits = $this->calc($password);
+        $bits = $this->calculate($password);
         if ($bits <= self::FIRST_STRENGHT_LEVEL) {
             return PasswordEntropyManager::FIRST_STRENGHT_LEVEL;
         } elseif ($bits <= self::SECOND_STRENGHT_LEVEL) {
@@ -50,8 +50,10 @@ class NistEntropyCalculationService implements StrenghtLevelServiceInterface
      * @param string $password
      * 
      * @return float
+     * 
+     * @throws PasswordIsEmptyException
      */
-    public function calc(string $password): int
+    public function calculate(string $password): float
     {
         if (empty($password)) {
             throw new PasswordIsEmptyException('Entropy can\'t be calculate because password is empty!');

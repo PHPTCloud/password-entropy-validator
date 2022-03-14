@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace PasswordEntropyBundle;
 
-use PasswordEntropyBundle\Service\NistEntropyCalculationService;
+use PasswordEntropyBundle\Service\NistEntropyCalculator;
+use PasswordEntropyBundle\Service\OccurrenceEntropyCalculator;
 
 /**
  * @author tcloud.ax <tcloud.ax@gmail.com>
@@ -17,25 +18,16 @@ class PasswordEntropyManager
     public const THIRD_STRENGHT_LEVEL = 3;
     public const FOURTH_STRENGHT_LEVEL = 4;
 
-    private NistEntropyCalculationService $nistEntropyCalculationService;
+    private NistEntropyCalculator $nistEntropyCalculator;
+    private OccurrenceEntropyCalculator $occurrenceEntropyCalculator;
 
     /**
-     * @param NistEntropyCalculationService $nistEntropyCalculationService
+     * @param NistEntropyCalculator $nistEntropyCalculator
+     * @param OccurrenceEntropyCalculator $occurrenceEntropyCalculator
      */
-    public function __construct(NistEntropyCalculationService $nistEntropyCalculationService)
+    public function __construct(NistEntropyCalculator $nistEntropyCalculator, OccurrenceEntropyCalculator $occurrenceEntropyCalculator)
     {
-        $this->nistEntropyCalculationService = $nistEntropyCalculationService;
-    }
-
-    /**
-     * Проверит уровень пароля
-     * 
-     * @param string $password
-     * 
-     * @return int
-     */
-    public function check(string $password): int
-    {
-        return $this->nistEntropyCalculationService->checkLevel($password);
+        $this->nistEntropyCalculator = $nistEntropyCalculator;
+        $this->occurrenceEntropyCalculator = $occurrenceEntropyCalculator;
     }
 }
