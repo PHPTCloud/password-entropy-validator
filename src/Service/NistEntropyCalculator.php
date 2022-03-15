@@ -60,7 +60,7 @@ class NistEntropyCalculator implements StrenghtLevelCalculatorInterface
         }
         $bits           = 0;
         $passwordLength = strlen($password);
-        $this->bits += self::FIRST_LEVEL_BIT;
+        $bits += self::FIRST_LEVEL_BIT;
         if ($passwordLength > 1) {
             $bits += $this->calculateLevel($password, self::SECOND_LEVEL_BIT, 1, 7);
         }
