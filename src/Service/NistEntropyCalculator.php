@@ -21,11 +21,11 @@ class NistEntropyCalculator implements StrenghtLevelCalculatorInterface
     private const THIRD_LEVEL_BIT = 1.5;
     private const FOURTH_LEVEL_BIT = 1.0;
     private const OUT_ALPHABET_LEVEL_BIT = 6; // бонусные 6 бит, если в пароле есть заглавные или спец. символы
-    public const FIRST_STRENGHT_LEVEL = 16;   // length < 16      очень слабый пароль
-    public const SECOND_STRENGHT_LEVEL = 27;  // length < 17-27   слабый пароль
-    public const THIRD_STRENGHT_LEVEL = 44;   // length < 28-44   средний пароль
-    public const FOURTH_STRENGHT_LEVEL = 80;  // length < 45-80   сильный пароль
-                                              // length > 80      очень сильный пароль
+    public const FIRST_STRENGHT_LEVEL = 16;   // bits < 16      очень слабый пароль
+    public const SECOND_STRENGHT_LEVEL = 27;  // bits < 17-27   слабый пароль
+    public const THIRD_STRENGHT_LEVEL = 44;   // bits < 28-44   средний пароль
+    public const FOURTH_STRENGHT_LEVEL = 80;  // bits < 45-80   сильный пароль
+                                              // bits > 80      очень сильный пароль
 
     /**
      * @inheritDoc
