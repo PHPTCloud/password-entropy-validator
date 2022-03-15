@@ -14,6 +14,11 @@
 composer require tcloud.ax/password-entropy-bundle
 ```
 
+### Примеры
+
+[Пример использования](https://gitlab.com/tcloud.ax/password_entropy_bundle/-/blob/master/docs/usage.md)
+
+
 ### Уровни паролей
 
 1 - очень слабый пароль
