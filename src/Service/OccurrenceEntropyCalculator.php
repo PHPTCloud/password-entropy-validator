@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PasswordEntropyBundle\Service;
 
 use PasswordEntropyBundle\Exception\PasswordIsEmptyException;
-use PasswordEntropyBundle\PasswordEntropyManager;
+use PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
 
 /**
  * @author tcloud.ax <tcloud.ax@gmail.com>
@@ -62,22 +62,22 @@ class OccurrenceEntropyCalculator implements StrenghtLevelCalculatorInterface
     {
         $percents = $this->calculate($password);
         if ($percents >= self::FIRST_STRENGHT_LEVEL) {
-            return PasswordEntropyManager::FIRST_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::FIRST_STRENGHT_LEVEL;
         } elseif (
             $percents < self::FIRST_STRENGHT_LEVEL 
             && $percents >= self::SECOND_STRENGHT_LEVEL
         ) {
-            return PasswordEntropyManager::SECOND_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::SECOND_STRENGHT_LEVEL;
         } elseif (
             $percents < self::SECOND_STRENGHT_LEVEL 
             && $percents >= self::THIRD_STRENGHT_LEVEL
         ) {
-            return PasswordEntropyManager::THIRD_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::THIRD_STRENGHT_LEVEL;
         } elseif (
             $percents < self::THIRD_STRENGHT_LEVEL 
             && $percents >= self::FOURTH_STRENGHT_LEVEL
         ) {
-            return PasswordEntropyManager::FOURTH_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::FOURTH_STRENGHT_LEVEL;
         }
 
         return 0;

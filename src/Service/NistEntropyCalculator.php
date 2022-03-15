@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PasswordEntropyBundle\Service;
 
 use PasswordEntropyBundle\Exception\PasswordIsEmptyException;
-use PasswordEntropyBundle\PasswordEntropyManager;
+use PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
 
 /**
  * @link   https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-63ver1.0.2.pdf
@@ -34,13 +34,13 @@ class NistEntropyCalculator implements StrenghtLevelCalculatorInterface
     {
         $bits = $this->calculate($password);
         if ($bits <= self::FIRST_STRENGHT_LEVEL) {
-            return PasswordEntropyManager::FIRST_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::FIRST_STRENGHT_LEVEL;
         } elseif ($bits <= self::SECOND_STRENGHT_LEVEL) {
-            return PasswordEntropyManager::SECOND_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::SECOND_STRENGHT_LEVEL;
         } elseif ($bits <= self::THIRD_STRENGHT_LEVEL) {
-            return PasswordEntropyManager::THIRD_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::THIRD_STRENGHT_LEVEL;
         } elseif ($bits <= self::FOURTH_STRENGHT_LEVEL) {
-            return PasswordEntropyManager::FOURTH_STRENGHT_LEVEL;
+            return PasswordEntropyLevelInterface::FOURTH_STRENGHT_LEVEL;
         }
 
         return 0;
