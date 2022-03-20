@@ -7,13 +7,13 @@
 // /src/DTO
 ...
 
-use PasswordEntropyBundle\Validator as EntropeAssert;
+use PasswordEntropyBundle\Validator as EntropyAssert;
 
-class Document
+class User
 {
     /**
-     * @EntropeAssert\NISTEntropy()
-     * @EntropeAssert\OccurrenceEntropy()
+     * @EntropyAssert\NISTEntropy()
+     * @EntropyAssert\OccurrenceEntropy()
      */
     public ?string $password;
 }
@@ -27,13 +27,13 @@ class Document
 // /src/DTO
 ...
 
-use PasswordEntropyBundle\Validator as EntropeAssert;
+use PasswordEntropyBundle\Validator as EntropyAssert;
 
-class Document
+class User
 {
     /**
-     * @EntropeAssert\NISTEntropy(level=2)
-     * @EntropeAssert\OccurrenceEntropy(level=4)
+     * @EntropyAssert\NISTEntropy(level=2)
+     * @EntropyAssert\OccurrenceEntropy(level=4)
      */
     public ?string $password;
 }

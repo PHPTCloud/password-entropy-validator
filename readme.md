@@ -44,7 +44,7 @@ composer require tcloud.ax/password-entropy-bundle
 где `bits` - битовый порог сложности пароля.
 
 
-### Уровень по вхождении символа
+### Уровень по вхождению символа
 
 
 1 уровень - `occurrence` > 80%
