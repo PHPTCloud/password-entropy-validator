@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Service;
+namespace PHPTCloud\PasswordEntropyBundle\Service;
 
-use PasswordEntropyBundle\Exception\PasswordIsEmptyException;
-use PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
+use PHPTCloud\PasswordEntropyBundle\Exception\PasswordIsEmptyException;
+use PHPTCloud\PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
 
 /**
  * @link   https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-63ver1.0.2.pdf

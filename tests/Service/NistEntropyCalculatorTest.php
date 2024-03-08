@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Service;
 
-use PasswordEntropyBundle\Service\NistEntropyCalculator;
+use PHPTCloud\PasswordEntropyBundle\Service\NistEntropyCalculator;
 use PHPUnit\Framework\TestCase;
 
 class NistEntropyCalculatorTest extends TestCase

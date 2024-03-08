@@ -11,7 +11,7 @@
 ### Установка 
 
 ```shell
-composer require tcloud.ax/password-entropy-bundle
+composer require phptcloud/password-entropy-bundle
 ```
 
 ### Примеры

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Service;
 
-use PasswordEntropyBundle\Service\OccurrenceEntropyCalculator;
+use PHPTCloud\PasswordEntropyBundle\Service\OccurrenceEntropyCalculator;
 use PHPUnit\Framework\TestCase;
 
 class OccurrenceEntropyCalculatorTest extends TestCase

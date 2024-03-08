@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Service;
+namespace PHPTCloud\PasswordEntropyBundle\Service;
 
 interface StrenghtLevelCalculatorInterface
 {

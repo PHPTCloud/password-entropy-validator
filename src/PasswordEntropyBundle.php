@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle;
+namespace PHPTCloud\PasswordEntropyBundle;
 
-use PasswordEntropyBundle\DependencyInjection\PasswordEntropyBundleExtension;
+use PHPTCloud\PasswordEntropyBundle\DependencyInjection\PasswordEntropyBundleExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**

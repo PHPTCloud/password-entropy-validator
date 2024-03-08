@@ -1,5 +1,5 @@
 {
-    "name": "tcloud.ax/password-entropy-bundle",
+    "name": "phptcloud/password-entropy-bundle",
     "description": "Symfony bundle for calculating password entropy",
     "type": "symfony-bundle",
     "license": "MIT",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PasswordEntropyBundle\\": "src/"
+            "PHPTCloud\\PasswordEntropyBundle\\": "src/"
         }
     },
     "require-dev": {

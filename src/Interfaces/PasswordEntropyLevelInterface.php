@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Interfaces;
+namespace PHPTCloud\PasswordEntropyBundle\Interfaces;
 
 interface PasswordEntropyLevelInterface
 {

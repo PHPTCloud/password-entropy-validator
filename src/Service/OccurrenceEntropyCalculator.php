@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Service;
+namespace PHPTCloud\PasswordEntropyBundle\Service;
 
-use PasswordEntropyBundle\Exception\PasswordIsEmptyException;
-use PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
+use PHPTCloud\PasswordEntropyBundle\Exception\PasswordIsEmptyException;
+use PHPTCloud\PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
 
 /**
  * @author tcloud.ax <tcloud.ax@gmail.com>

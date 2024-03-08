@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\DependencyInjection;
+namespace PHPTCloud\PasswordEntropyBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

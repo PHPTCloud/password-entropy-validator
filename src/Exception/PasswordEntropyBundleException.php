@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Exception;
+namespace PHPTCloud\PasswordEntropyBundle\Exception;
 
 use Exception;
 

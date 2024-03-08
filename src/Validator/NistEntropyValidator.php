@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Validator;
+namespace PHPTCloud\PasswordEntropyBundle\Validator;
 
-use PasswordEntropyBundle\Service\NistEntropyCalculator;
+use PHPTCloud\PasswordEntropyBundle\Service\NistEntropyCalculator;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;

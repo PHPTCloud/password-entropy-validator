@@ -4,10 +4,8 @@
 
 ```php
 <?php
-// /src/DTO
-...
 
-use PasswordEntropyBundle\Validator as EntropyAssert;
+use PHPTCloud\PasswordEntropyBundle\Validator as EntropyAssert;
 
 class User
 {
@@ -24,10 +22,8 @@ class User
 
 ```php
 <?php
-// /src/DTO
-...
 
-use PasswordEntropyBundle\Validator as EntropyAssert;
+use PHPTCloud\PasswordEntropyBundle\Validator as EntropyAssert;
 
 class User
 {

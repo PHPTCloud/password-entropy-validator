@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Validator;
+namespace PHPTCloud\PasswordEntropyBundle\Validator;
 
 use Doctrine\Common\Annotations\Annotation;
 use Symfony\Component\Validator\Constraint;
-use PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
+use PHPTCloud\PasswordEntropyBundle\Interfaces\PasswordEntropyLevelInterface;
 
 /**
  * @Annotation

@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PasswordEntropyBundle\Exception;
-
-use PasswordEntropyBundle\Exception\PasswordEntropyBundleException;
+namespace PHPTCloud\PasswordEntropyBundle\Exception;
 
 class PasswordIsEmptyException extends PasswordEntropyBundleException
 {
